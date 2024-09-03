@@ -59,10 +59,19 @@
             padding: 20px;
             border-radius: 8px;
         }
-        .progress-bar {
+        .progress-bar ul {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            margin-right: 20px;
+            list-style-type: none;
+        }
+        .input-container {
+            padding: 0 40px 0 40px;
+        }
+        .tick-label {
+            width: 15px;
+            height: 15px;
         }
         .progress-step {
             display: flex;
@@ -75,6 +84,14 @@
             height: 1px;
             background-color: #e0e0e0;
             margin: 0 10px;
+        }
+        .progress-line{
+            flex-grow: 1;
+            height: 2px;
+            align-self: center;
+            background-color: #e0e0e0;
+            margin: 0 10px;
+            
         }
         .progress-step:last-child::after {
             display: none;
@@ -90,6 +107,13 @@
             border: 1px solid #e0e0e0;
             border-radius: 4px;
         }
+        .registration {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 250px;
+            margin-right: 20px;
+            justify-content: space-between;
+        }
         .btn {
             padding: 10px 20px;
             background-color: #007bff;
@@ -98,15 +122,15 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        .btn-secondary {
-            background-color: #f8f9fa;
-            color: #333;
-        }
         .product-image {
             align-items: center;
             background-color: #f0f0f0;
             object-fit: fill;
             margin-bottom: 10px;
+        }
+        .price-counter{
+            display: flex;
+            justify-content: space-between;
         }
         .quantity-control {
             display: flex;
@@ -136,6 +160,7 @@
 </head>
 <body>
     <div class="container">
+
         <header>
             <img src="./images/Daddy.png" alt="Daddy logo" class="logo">
             <nav>
@@ -150,38 +175,57 @@
                 <img src="./images/random.jpeg" alt="Profile">
             </div>
         </header>
+
         <main>
+
             <div class="checkout-form">
                 <div class="progress-bar">
-                    <span class="progress-step active">Account</span>
-                    <span class="progress-step">Shipping</span>
-                    <span class="progress-step">Payment</span>
+                    <ul>
+                        <li><span style="color: #007bff;">Account</span></li>
+                        <div class="progress-line"></div>
+                        <img src="./images/tick-icon.png" alt="tick icon" class="tick-label">
+                        <div class="progress-line"></div>
+                        <li style="color: #6d6a6a;">Shipping</li>
+                        <div class="progress-line"></div>
+                        <img src="./images/tick-icon.png" alt="tick icon" class="tick-label">
+                        <div class="progress-line"></div>
+                        <li style="color: #6d6a6a;">Payment</li>
+                    </ul>
                 </div>
-                <h2>Account details</h2>
+
+                <h4 style="margin:0 40px 20px 40px;">Account details</h4>
+
                 <form>
-                    <label for="email">Email address</label>
-                    <input type="text" id="email" value="Email@myemail.com">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" value="********">
-                    <div>
-                        <a href="#">Register for account</a>
+                    <div class="input-container">
+                        <label for="email" >Email address</label>
+                        <input type="text" id="email" value="Email@myemail.com">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" value="********">
+                    </div>
+                   
+                    <div class="registration" style="margin-bottom: 100px;">
+                        <p>Register for account</p>
                         <button class="btn">Login</button>
                     </div>
                 </form>
-                <div style="margin-top: 20px;">
-                    <button class="btn btn-secondary">Cancel order</button>
+
+                <div class="registration">
+                    <p>Cancel order</p>
                     <button class="btn">Shipping details</button>
                 </div>
             </div>
+
             <div class="order-summary">
-                <h2>Order Summary</h2>
+                <h4>Order Summary</h4>
                 <img src="./images/headphone.jpeg" alt="headphone" class="product-image">
                 <h3>Sony wireless headphones</h3>
-                <p>£320.45</p>
-                <div class="quantity-control">
+                <div class="price-counter">
+                    <p style="font-weight: bold;">£320.45</p>
+                    <div class="quantity-control">
                     <button>-</button>
                     <span>1</span>
                     <button>+</button>
+                </div>
                 </div>
                 <div class="discount-code">
                     <input type="text" placeholder="Gift Card / Discount code">
@@ -194,6 +238,7 @@
                     <h3>Total <span style="float: right;">£320.45</span></h3>
                 </div>
             </div>
+
         </main>
     </div>
 </body>
