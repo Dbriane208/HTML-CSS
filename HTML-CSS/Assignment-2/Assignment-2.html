@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f0fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: white;
+            border-radius: 24px;
+            padding: 30px;
+            width: 200px;
+            height: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .title {
+            color: #5f6368;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .button {
+            background-color: #f8f9fa;
+            color: #3c4043;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e8eaed;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./images/google-icon.png" alt="Google logo" class="logo">
+        <div class="name">Ranesh Suthar</div>
+        <div class="title">Designer · Engineer</div>
+        <div class="social-icons">
+            <img src="./images/facebook-icon.png" alt="Facebook" class="social-icon">
+            <img src="./images/twitter-icon.png" alt="Twitter" class="social-icon">
+            <img src="./images/instagram-icon.png" alt="Instagram" class="social-icon">
+        </div>
+        <button class="button">Add me to search</button>
+    </div>
+</body>
+</html>
