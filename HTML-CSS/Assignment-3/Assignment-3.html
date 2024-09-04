@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #fff;
         }
         .container {
             max-width: 1200px;
@@ -48,14 +48,14 @@
         }
         .checkout-form {
             flex: 2;
-            background-color: #fff;
+            background-color: #f1f7fa;
             padding: 20px;
             border-radius: 8px;
             margin-right: 20px;
         }
         .order-summary {
             flex: 1;
-            background-color: #fff;
+            background-color: #f1f7fa;
             padding: 20px;
             border-radius: 8px;
         }
@@ -104,28 +104,51 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
+            background-color: rgb(232,234,235);
             border: 1px solid #e0e0e0;
             border-radius: 4px;
         }
         .registration {
             display: flex;
             margin-top: 20px;
-            margin-left: 250px;
             margin-right: 20px;
-            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            justify-content: end;
         }
-        .btn {
-            padding: 10px 20px;
+        .btn-login {
+            width: 100px;
+            height: 40px;
             background-color: #007bff;
             color: #fff;
             border: none;
-            border-radius: 4px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .btn-shipping {
+            width: 150px;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .btn-apply {
+            width: 100px;
+            height: 40px;
+            color: #007bff;
+            border-color: #007bff;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #F2F3F5;
             cursor: pointer;
         }
         .product-image {
-            align-items: center;
+            object-fit: contain;
             background-color: #f0f0f0;
-            object-fit: fill;
             margin-bottom: 10px;
         }
         .price-counter{
@@ -169,11 +192,14 @@
                 <a href="#">Contact</a>
                 <a href="#">Help</a>
             </nav>
+
             <div class="account">
-                Account ▼
-                <span style="font-size: 12px;">3 items</span>
+                <p style="margin: 5px;">Account ▼</p>
+                <img src="./images/shopping-bag-icon.png" alt="shopping-bag-icon" style="width: 20px; height: 20px;">
+                <span style="font-size: 15px;">3 items</span>
                 <img src="./images/random.jpeg" alt="Profile">
             </div>
+
         </header>
 
         <main>
@@ -198,27 +224,31 @@
                 <form>
                     <div class="input-container">
                         <label for="email" >Email address</label>
-                        <input type="text" id="email" value="Email@myemail.com">
+                        <input type="text" id="email" value="Email@myemail.com" style="  background-color: #d7e0e6;">
                         <label for="password">Password</label>
-                        <input type="password" id="password" value="********">
+                        <input type="password" id="password" value="********" style="  background-color: #d7e0e6;">
                     </div>
                    
-                    <div class="registration" style="margin-bottom: 100px;">
+                    <div class="registration">
                         <p>Register for account</p>
-                        <button class="btn">Login</button>
+                        <button class="btn-login">Login</button>
                     </div>
                 </form>
 
+                <hr style="margin-right:20px; margin-left: 35px; margin-top: 150px; margin-bottom: 50px; color: #e0e0e0;"></hr>
+
                 <div class="registration">
                     <p>Cancel order</p>
-                    <button class="btn">Shipping details</button>
+                    <button class="btn-shipping">Shipping details</button>
                 </div>
+
             </div>
 
             <div class="order-summary">
                 <h4>Order Summary</h4>
                 <img src="./images/headphone.jpeg" alt="headphone" class="product-image">
                 <h3>Sony wireless headphones</h3>
+
                 <div class="price-counter">
                     <p style="font-weight: bold;">£320.45</p>
                     <div class="quantity-control">
@@ -227,9 +257,12 @@
                     <button>+</button>
                 </div>
                 </div>
-                <div class="discount-code">
-                    <input type="text" placeholder="Gift Card / Discount code">
-                    <button class="btn">Apply</button>
+
+                <label style="font-size: 12px;" for="Gift-card">Gift Card / Discount Code</label>
+
+                <div class="discount-code" style="align-items: center;">
+                    <input type="text" id="Gift-card">
+                    <button class="btn-apply">Apply</button>
                 </div>
                 <div style="margin-top: 20px;">
                     <p>Sub total <span style="float: right;">£316.55</span></p>
