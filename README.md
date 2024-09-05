@@ -16,6 +16,7 @@ We have covered a wide range of topics in HTML and CSS and did some amazing prac
 - Day three introduced Flexbox, where we learned how to create responsive layouts by aligning and distributing space within containers.
 ## Challenge 1
 <img src="https://github.com/Dbriane208/HTML-CSS/blob/main/HTML-CSS/Assignment-3/images/checkout.png" alt="Checkout">
+
 ## Challenge 2
 <img src="https://github.com/Dbriane208/HTML-CSS/blob/main/HTML-CSS/Assignment-4/images/snap.png" alt="Snap">
 
